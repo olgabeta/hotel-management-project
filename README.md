@@ -1,18 +1,20 @@
 # Hotel management project in OPERATING SYSTEMS uni course
 
-In this group project, we were asked to program the conversion of a binary number to its decimal equivalent using message queues, shared memory, semaphores and signals. 
+In this group project, we were asked to program a client-server application for hotel bookings. 
 
-Master (server):
-1) Creates message queue, attaches to shared memory and initializes semaphore for worker.
-2) Creates matrix for binary number (size of matrix = number of workers).
-3) Receives binary number from workers (filled matrix) and converts it to decimal.
+Server:
+- Stores information for each hotel (name, location, rating, list of rooms).
+- Categorizes hotel rooms based on number of beds and stores information for each room (description, price per night, number of beds, booking details).
 
-Worker (client):
-1) Attaches to shared memory and receive semaphore. 
-2) Each worker has a process id which corresponds to its designated cell in the matrix, and it's randomly assigned a value of 0 or 1 (binary digit).
+Client:
+- Chooses hotel from given list (by server).
+- Can book a new room in said hotel, display booked rooms or empty rooms, view all hotel rooms, clear a booking or search for a room based on price or number of beds.
+
+The client code is only responsible for the connection to the server and any user input - all hotel management details are stored in the server code.
 
 --------
 
 This repository contains:
-- Master code (.c file)
-- Worker code (.c file)
+- Server folder
+- Client folder
+- Project instructions (.pdf file)
