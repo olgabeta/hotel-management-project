@@ -1,4 +1,4 @@
-# Hotel management project in OPERATING SYSTEMS uni course
+# Hotel management project
 
 In this group project, we were asked to program a client-server application for hotel bookings. 
 
